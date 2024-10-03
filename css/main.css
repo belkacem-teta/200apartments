@@ -1,0 +1,92 @@
+/* Start Variables */
+
+:root {
+  --main-duration: 0.5s;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Kufi Arabic", "Cairo", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Meduim Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+/* End Components */
+
+/* Start Landing */
+
+.landing {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Make sure it's behind content */
+  background: url('../res/building.jpg') no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+}
+
+header ul li{
+  display: inline-block;
+  list-style: none;
+}
+
+/* End Landing */
