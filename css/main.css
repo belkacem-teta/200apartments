@@ -1,6 +1,12 @@
 /* Start Variables */
 
 :root {
+  --color-primary: #A52A2A;
+  --color-secondary: #334E58;
+  --color-accent: #ED7D3A;
+  --color-white: #E1E0E0;
+  --color-dark: #020202;
+  --default-spacing: 15px;
   --main-duration: 0.5s;
 }
 
@@ -21,7 +27,8 @@ html {
 }
 
 .container {
-  padding: 15px;
+  padding-left: var(--default-spacing);
+  padding-right: var(--default-spacing);
   margin-left: auto;
   margin-right: auto;
 }
@@ -68,7 +75,7 @@ html {
   width: auto;
   height: auto;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Make sure it's behind content */
+  z-index: -1; 
   background: url('../res/building.jpg') no-repeat;
   background-size: cover;
 }
@@ -77,12 +84,15 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  padding-top: var(--default-spacing);
+  padding-bottom: var(--default-spacing);
 }
 
 header img {
   width: 50px;
   height: 50px;
   box-shadow: 0px 0px 10px black;
+  background-color: rgba(0, 0, 0, .4);
 }
 
 header ul li{
@@ -93,13 +103,20 @@ header ul li{
 }
 
 .landing .content {
-  background-color: brown;
-  position: relative;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing .content h1 {
-  color: white;
+  color: var(--color-white);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
   text-align: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.6;
 }
 
 /* End Landing */
