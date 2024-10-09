@@ -8,6 +8,7 @@
   --color-dark: #020202;
   --default-spacing: 15px;
   --main-duration: 0.5s;
+  --default-shadow: 1px 1px 10px black;
 }
 
 /* End Variables */
@@ -95,11 +96,72 @@ header img {
   background-color: rgba(0, 0, 0, .4);
 }
 
-header ul li{
-  display: inline-block;
+header .menu-icon {
+  font-size: 50px;
+  color: var(--color-white);
+  text-shadow: var(--default-shadow);
+}
+
+header .links {
+  position: relative;
+}
+
+header .links ul {
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  width: max-content;
+  left: 0;
+  padding: 0;
+}
+
+header .links::before {
+  content: "";
+  position: absolute;
+  border: 12.5px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, .5);
+  left: 10px;
+  top: 42px;
+}
+
+header .links li{
   list-style: none;
   color: white;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  text-shadow: var(--default-shadow);
+}
+
+header .links li {
+  border-bottom: 1px solid rgba(255, 255, 255, .4);
+}
+
+@media (min-width: 768px) {
+
+  header .links i {
+    display: none;
+  }
+
+  header .links::before {
+    display: none
+  }
+
+  header .links ul {
+    background-color: transparent;
+    position: inherit;
+  }
+
+  header .links li{
+    display: inline-block;
+    list-style: none;
+    width: fit-content;
+    height: fit-content;
+    line-height: initial;
+    border: none;
+    margin-right: 15px;
+  }
+
 }
 
 .landing .content {
@@ -112,11 +174,12 @@ header ul li{
 
 .landing .content h1 {
   color: var(--color-white);
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+  text-shadow: var(--default-shadow);
   text-align: center;
   font-weight: 800;
   font-size: 2.5rem;
   line-height: 1.6;
+  -webkit-text-stroke: 1px black;
 }
 
 /* End Landing */
