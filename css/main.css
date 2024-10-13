@@ -116,16 +116,6 @@ header .links ul {
   display: none;
 }
 
-/* header .links::before {
-  content: "";
-  position: absolute;
-  border: 12.5px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, .5);
-  left: 10px;
-  top: 42px;
-  display: none;
-} */
-
 header .links li{
   list-style: none;
   width: 150px;
@@ -154,10 +144,6 @@ header .links li a:hover {
   header .links i {
     display: none;
   }
-
-  /* header .links::before {
-    display: none
-  } */
 
   header .links ul {
     background-color: transparent;
