@@ -63,6 +63,28 @@ html {
 
 /* Start Components */
 
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text-box {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 /* End Components */
 
 /* Start Landing */
@@ -83,7 +105,7 @@ html {
   height: auto;
   transform: translate(-50%, -50%);
   z-index: -1; 
-  background: url('../res/building.jpg') no-repeat;
+  background: url('../res/placeholder.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -193,7 +215,87 @@ header .links li a:hover {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.6;
-  margin-top: -40px;
+  margin-top: -80px;
 }
 
 /* End Landing */
+
+/* Start Features */
+
+#features .text-box {
+  margin-top: calc(50px - 20px);
+  margin-bottom: 50px;
+}
+
+.slideshow .slideshow-container {
+  width: 100%;
+  position: relative;
+}
+
+.slideshow .slide {
+  display: none;
+}
+
+.slideshow .slide img {
+  width: 100%;
+}
+
+.slideshow .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slideshow .prev {
+  left: 0;
+  border-radius: 3px 0 0 3px; 
+}
+
+.slideshow .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slideshow .caption {
+  color: #f2f2f2;
+  line-height: 1.5;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: var(--default-shadow);
+}
+
+.slideshow .dots-container {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.slideshow .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slideshow .active, .dot:hover {
+  background-color: var(--color-secondary);
+}
+
+
+/* End Features */

@@ -19,7 +19,7 @@
     <!-- Start Landing -->
     <section class="landing">
       <video autoplay muted loop playsinline>
-        <source src="res/video.mp4" type="video/mp4">
+        <source src="res/bg-video.mp4" type="video/mp4">
       </video>
       <div class="container">
         <header>
@@ -35,7 +35,7 @@
           </div>
         </header>
         <div class="content">
-          <p>مؤسسة الترقية العقارية بيض القول ميلود</p>
+          <p> مؤسسة الترقية العقارية بيض القول ميلود </p>
           <h1>مشروع 200 سكن ترقوي بعين الشيح الجلفة</h1>
         </div>
       </div>
@@ -45,10 +45,49 @@
     <!-- Start Features -->
     <section id="features" class="features">
       <div class="container">
-        <div class="feat">
-          <div class="text-box">
-
+        <div class="text-box">
+          الإقامة تتضمن حاليا 200 سكن
+          F4
+          قيد الإنجاز بنسبة تقدم
+          90%
+          تتراوح مساحتها بين 107 إلى 115 متر مربع
+          مبنية بأجود المواد وأحدث التقنيات المعمارية والتي تعتبر الأولى من نوعها في ولاية الجلفة
+        </div>
+        <div class="slideshow">
+          <div class="slideshow-container">
+            <!-- Slide Cards -->
+            <div class="slide fade">
+              <img src="res/placeholder.jpg">
+              <div class="caption">حراسة أمنية على مدار الساعة وأجهزة إنذار صوتية في كل بيت</div>
+            </div>
+            <div class="slide fade">
+              <img src="res/placeholder.jpg">
+              <div class="caption">مطبخ شبه مجهز بطابع عصري وأنيق</div>
+            </div>
+            <div class="slide fade">
+              <img src="res/placeholder.jpg">
+              <div class="caption">تدفئة مركزية ونوافذ PVC تضمن العزل الحراري</div>
+            </div>
+            <div class="slide fade">
+              <img src="res/placeholder.jpg">
+              <div class="caption">أرضية رخامية وأبواب عالية الجودة</div>
+            </div>
+            <div class="slide fade">
+              <img src="res/placeholder.jpg">
+              <div class="caption">متموقعة في بقعة حيوية في حي عين الشيح قريبة من مختلف المرافق</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="prevSlide()">&#10095;</a>
+            <a class="next" onclick="nextSlide()">&#10094;</a>
           </div>
+          <!-- The dots/circles -->
+          <div class="dots-container">
+            <div class="dot" onclick="changeSlide(0)"></div>
+            <div class="dot" onclick="changeSlide(1)"></div>
+            <div class="dot" onclick="changeSlide(2)"></div>
+            <div class="dot" onclick="changeSlide(3)"></div>
+            <div class="dot" onclick="changeSlide(4)"></div>
+          </div> 
         </div>
       </div>
     </section>
