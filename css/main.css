@@ -6,6 +6,7 @@
   --color-accent: #ED7D3A;
   --color-white: #E1E0E0;
   --color-dark: #020202;
+  --color-background: #eee;
   --default-spacing: 15px;
   --main-duration: 0.5s;
   --default-shadow: 1px 1px 10px black;
@@ -19,6 +20,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -228,7 +231,6 @@ header .links li a:hover {
 }
 
 .slideshow .slideshow-container {
-  width: 100%;
   position: relative;
 }
 
@@ -237,7 +239,7 @@ header .links li a:hover {
 }
 
 .slideshow .slide img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .slideshow .prev, .next {
@@ -294,8 +296,55 @@ header .links li a:hover {
 }
 
 .slideshow .active, .dot:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-accent);
 }
 
 
 /* End Features */
+
+/* Start Vision */
+
+#vision {
+  background-color: var(--color-background);
+}
+
+.vision .content {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.vision .content p {
+  margin-bottom: 10px;
+}
+
+.vision .content ul {
+  margin-right: 30px;
+}
+
+@media (min-width: 768px) {
+  .vision .content ul {
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vision .content ul {
+    margin-right: 50px;
+  }
+}
+
+/* End Vision */
+
+/* Start Pricing */
+
+#pricing .content p {
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+#pricing .content a {
+  text-align: center;
+}
+
+/* End Pricing */
