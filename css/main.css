@@ -35,6 +35,9 @@ html {
   padding-right: var(--default-spacing);
   margin-left: auto;
   margin-right: auto;
+  max-width: 100vw;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 /* Small Screens */
@@ -71,10 +74,34 @@ section {
   padding-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 992px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .text-box {
   text-align: center;
   font-weight: 500;
   font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.text {
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -308,11 +335,6 @@ header .links li a:hover {
   background-color: var(--color-background);
 }
 
-.vision .content {
-  font-weight: 500;
-  line-height: 1.5;
-}
-
 .vision .content p {
   margin-bottom: 10px;
 }
@@ -338,13 +360,37 @@ header .links li a:hover {
 /* Start Pricing */
 
 #pricing .content p {
-  font-weight: 500;
-  line-height: 1.5;
   margin-bottom: 10px;
 }
 
 #pricing .content a {
+  display: inline-block;
+  width: 100%;
   text-align: center;
 }
 
 /* End Pricing */
+
+/* Start Enroll */
+
+#enroll {
+  background-color: var(--color-background);
+}
+
+#enroll h3 {
+  color: var(--color-secondary);
+  font-size: 1.3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#enroll ul {
+  margin-right: 30px;
+}
+
+#enroll h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* End Enroll */
