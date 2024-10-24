@@ -10,7 +10,7 @@ document.addEventListener(
       let menu = document.getElementById("menu");
       let button = document.getElementById("menu-btn");
 
-      if (menu.style.display === "block" && !menu.contains(event.target) && !button.contains(event.target)) {
+      if (menu.style.display === "block" && !button.contains(event.target) && event.target?.tagName !== "LI") {
         menu.style.display = "none";
       }
     }
@@ -22,9 +22,7 @@ changeSlide(0);
 function changeSlide(n) {
   // get elements
   let slides = document.getElementsByClassName("slide");
-  console.log(slides);
   let dots = document.getElementsByClassName("dot");
-  console.log(dots);
   // check n
   if (n >= slides.length) {n = 0}
   else if (n < 0) {n = slides.length - 1}
