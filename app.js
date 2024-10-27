@@ -46,3 +46,37 @@ function nextSlide() {
 function prevSlide() {
   changeSlide(currentSlide - 1);
 }
+
+
+
+// Scroll Button
+
+// Show the button when the user scrolls down 100px
+window.onscroll = function() {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const footer = document.getElementById("footer");
+  
+  // Show button when scrolled down 100px
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+  
+  // Adjust button position if it's overlapping the footer
+  const footerRect = footer.getBoundingClientRect();
+  const buttonHeight = scrollToTopBtn.offsetHeight;
+  
+  // Check if the button would overlap the footer
+  if (footerRect.top < window.innerHeight) {
+    scrollToTopBtn.style.bottom = `${footerRect.height + 15}px`; // Adjust to just above the footer
+  } else {
+    // Default position
+    scrollToTopBtn.style.bottom = "15px"; 
+  }
+};
+
+// Scroll to top function
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
